@@ -1,30 +1,17 @@
-// Naming convention
+// Operators
 
-// variables camelCase
-const userName = 'john'
+// Assignment Operators
 
-// constant CAPITAL_SNAKE_CASE
-const _PI = 3.14
-const ERROR_MESSAGE = 'Sorry something broke'
+// assignment
+const userName = 'John'
+// augmented assignment
+// += -= /= %= *= **=
 
-// boolean variable
-const isComplete = true
-const hasProfileImage = false
+let x = 0
+// x = x + 2
+// x = x + 5
+x += 2
+x += 5
 
-// you can't have -
-const person = {
-  'user-name': 'Johan'
-}
-
-// you can't start with a number
-const userName1 = 'username'
-
-// you can't use a reserved keyword
-const _for = 3.14
-
-// variables are case sensitive
-
-const pi = 3.14
-const Pi = 3.14
-const PI = 3.14
-const pI = 3.14
+console.log({ x })
+//-----------------------------
