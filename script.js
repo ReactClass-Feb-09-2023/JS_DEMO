@@ -1,11 +1,12 @@
-// Operators
-// relational operators
-// in instanceof
+// Casting (Type conversion)
+// string to number
+console.log(1 === Number('1'))
+console.log(Number('r'))
+console.log(typeof parseInt('10', 10))
 
-const obj = {
-  key1: 'value1',
-  key2: 'value2'
-}
+// to string
+console.log(String(true)) //'true'
+console.log(true)
 
-console.log('key1' in obj)
-console.log(obj instanceof Object)
+// to boolean
+// console.log(Boolean())
