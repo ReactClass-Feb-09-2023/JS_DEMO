@@ -1,42 +1,83 @@
-// to boolean
-console.log(Boolean())
+// // flow control
+// // conditional statements
+// // if statement
 
-// truthy vs. falsy
+// const person = {
+//   name: 'john',
+//   age: 24,
+//   accountType: 'regular'
+// }
 
-// numbers
-// 0, NaN => false
-// any other number => true
-console.log(Boolean(0))
-console.log(Boolean(NaN))
-console.log(Boolean(3))
+// if (person.age < 18) {
+//   console.log('Access Denied')
+//   //... more lines of code
+// }
 
-// strings
-// '' empty string => false
-// any other char => true
-console.log(Boolean(''))
-console.log(Boolean('aa'))
+// if (person.age > 18) {
+//   console.log('Access Granted')
+// 	// ...
+// }
 
-// undefined, null => false
-console.log(Boolean(undefined))
-console.log(Boolean(null))
+// // if -else
 
-// arrays, objects => true
-console.log(Boolean([]))
-console.log(Boolean({}))
+// if (person.age < 18) {
+//   console.log('Access Denied')
+// } else {
+//   console.log('Access Granted')
+// }
 
-// check empty array
-const arr = ['a', 'b']
-console.log(Boolean(arr.length))
+// if (person.age < 10){
 
-// check empty objects
-const obj = {
-  key1: 'val1'
+// }else if (person.age < 18){
+
+// }
+
+// // switch-case
+
+// if (person.accountType === 'premium'){
+// 	console.log('Special message 1')
+// }else if (person.accountType === 'golden') {
+// 	console.log('Special message 2')
+// } else {
+// 	console.log('Regular message')
+// }
+
+// switch (person.accountType) {
+// 	case 'premium':
+// 		console.log('special msg 1');
+// 		break;
+// 	case 'golden':
+// 		console.log('special msg 2')
+// 		break;
+// 	default:
+// 		console.log('regular msg')
+// }
+// console.log('next line')
+
+// // ternary operator
+
+// if (person.age < 18) {
+//   console.log('Access Denied')
+// } else {
+//   console.log('Access Granted')
+// }
+
+// person.age < 18 ? console.log('denied') : console.log('granted')
+
+// --- fizz buzz
+// given a number, log to the console fizz if it is divisible by 3, buzz if divisible by 5 and fizzBuzz if divisible by 5 and 3
+
+// if else, logical operators && || ! , % arithmetic operator
+
+const num = 3
+let output
+
+if (num % 5 === 0 && num % 3 === 0) {
+  output = 'FizzBuzz'
+} else if (num % 3 === 0) {
+  output = 'Fizz'
+} else if (num % 5 === 0) {
+  output = 'Buzz'
 }
-console.log(Boolean(Object.keys(obj).length))
 
-// booleans true, false
-
-// !! double bang
-
-console.log(Boolean(0))
-console.log(!!3)
+console.log(output)
