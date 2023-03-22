@@ -1,12 +1,7 @@
 // Operators
-// comparison operators
-// equality ==
-// strict equality ===
-// not equal !=
-// strict not equal !==
-// greater than >
-// greater than or equal >=
-// smaller than <
-// smaller or equal <=
+// logical operators
+// AND &&
+// OR || (shift + \) pipe character
+// NOT ! (bang, exclamation mark)
 
-console.log(4 !== '4')
+console.log(!false)
