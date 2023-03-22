@@ -1,17 +1,11 @@
 // Operators
-// string
-// + concatenation
-// template literals
+// relational operators
+// in instanceof
 
-const person1 = {
-  name: 'john',
-  email: 'john@email.com'
+const obj = {
+  key1: 'value1',
+  key2: 'value2'
 }
 
-const person2 = {
-  name: 'Willi',
-  email: 'Willi@email.com'
-}
-
-console.log('Hello' + ' ' + person2.name)
-console.log(`Hello ${person2.name}`)
+console.log('key1' in obj)
+console.log(obj instanceof Object)
