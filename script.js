@@ -1,35 +1,24 @@
-// function foo() {
-//   let y = 0
-//   return () => {
-//     const x = ++y
-//     console.log(x)
-//   }
-// }
-
-// foo()()
-
-function counter() {
-  let count = 0
-
-  return () => {
-    count++
-    console.log(count)
-  }
+/**
+ * @param {number} x desc x
+ * @param {number} y desc y
+ * @param {number} z desc z
+ * @returns sum of all args (x+y+z)
+ */
+const foo = (x, y, z) => {
+  if (typeof x !== 'number' || typeof y !== 'number' || typeof z !== 'number')
+    throw new Error(`${typeof x} received, expecting number`)
+  return x + y + z
 }
 
-const myCounter = counter()
+// JS DOCS
 
-myCounter()
-myCounter()
-myCounter()
-myCounter()
+// foo('3', 3, 3)
 
-const myCounter2 = counter()
-
-myCounter2()
-myCounter2()
-myCounter2()
-
-counter()()
-counter()()
-counter()()
+try {
+  foo('3', 3, 3)
+} catch (error) {
+  console.error(error)
+  // do something else.
+} finally {
+  // run common code that runs regardless of what foo does
+}
