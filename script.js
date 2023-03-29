@@ -1,57 +1,58 @@
-// DRY = Don't Repeat Yourself
-
-// function, methods
-
-// function declaration
-function greet(prefix, name) {
-  console.log('THIS', this)
-}
-
-const greet2 = function () {
-  console.log('THIS', this)
-}
-
-const greet3 = (x, y) => {
-  console.log('THIS', this)
-}
-
-const sum = (x, y) => {
-  return x + y
-}
-
-// function invocation
-// greet(true, false)
-// const ret = greet3()
-// console.log(ret)
-// greet3()
-
-// const result = sum(4, 5)
-// console.log(result)
-
-// Callback functions
-
-// const arr = [10, 20, 30]
-
-// const arrayIterationCB = (e, i, array) => {
-//   console.log(e, i, array)
+// const car = {
+//   color: 'red',
+//   seat: 4,
+//   speed: 0,
+//   accelerate: function () {
+//     this.speed++
+//   }
 // }
 
-// arr.forEach(arrayIterationCB)
+// console.log(car.speed)
+// car.accelerate()
+// car.accelerate()
+// car.accelerate()
+// console.log(car.speed)
 
-// implement a function called forEach that accepts a callback function, and use it to iterate over the array elements and run the CB function.
+// class => blueprint to create objects
 
-const demo_array = ['a', 'b', 'c']
+class Car {
+  constructor(color, seats) {
+    this.color = color
+    this.seats = seats
+  }
+  speed = 0
 
-const myFunc = (e, i, a) => {
-  console.log(e, i, a)
-}
+  accelerate() {
+    this.speed++
+  }
 
-const forEach = (arr, cb) => {
-  if (!Array.isArray(arr) || typeof cb !== 'function')
-    throw new TypeError('invalid data type')
-  for (let i = 0; i < arr.length; i++) {
-    cb(arr[i], i, arr)
+  brake() {
+    this.speed = 0
   }
 }
 
-forEach(demo_array, myFunc)
+const car = new Car('red', 4)
+
+console.log(car.speed)
+car.accelerate()
+car.accelerate()
+car.accelerate()
+console.log(car.speed)
+
+const civic = new Car('blue', 2)
+
+console.log(civic.speed)
+civic.accelerate()
+civic.accelerate()
+civic.brake()
+console.log(civic.speed)
+
+class Array {
+  constructor(arr) {
+    this.arr = arr
+  }
+
+  forEach() {}
+  map() {}
+  filter() {}
+}
