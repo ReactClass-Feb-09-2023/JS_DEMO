@@ -1,58 +1,35 @@
-// const car = {
-//   color: 'red',
-//   seat: 4,
-//   speed: 0,
-//   accelerate: function () {
-//     this.speed++
+// function foo() {
+//   let y = 0
+//   return () => {
+//     const x = ++y
+//     console.log(x)
 //   }
 // }
 
-// console.log(car.speed)
-// car.accelerate()
-// car.accelerate()
-// car.accelerate()
-// console.log(car.speed)
+// foo()()
 
-// class => blueprint to create objects
+function counter() {
+  let count = 0
 
-class Car {
-  constructor(color, seats) {
-    this.color = color
-    this.seats = seats
-  }
-  speed = 0
-
-  accelerate() {
-    this.speed++
-  }
-
-  brake() {
-    this.speed = 0
+  return () => {
+    count++
+    console.log(count)
   }
 }
 
-const car = new Car('red', 4)
+const myCounter = counter()
 
-console.log(car.speed)
-car.accelerate()
-car.accelerate()
-car.accelerate()
-console.log(car.speed)
+myCounter()
+myCounter()
+myCounter()
+myCounter()
 
-const civic = new Car('blue', 2)
+const myCounter2 = counter()
 
-console.log(civic.speed)
-civic.accelerate()
-civic.accelerate()
-civic.brake()
-console.log(civic.speed)
+myCounter2()
+myCounter2()
+myCounter2()
 
-class Array {
-  constructor(arr) {
-    this.arr = arr
-  }
-
-  forEach() {}
-  map() {}
-  filter() {}
-}
+counter()()
+counter()()
+counter()()
